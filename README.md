@@ -2,18 +2,6 @@
 
 A comprehensive web application built with React.js for users to explore Ayurveda principles, assess their Prakruti (constitutional type), track wellness through journaling and meal plans, view reports, and engage in a community chat. The app integrates with a Node.js/Express backend for user authentication, data persistence, and API interactions.
 
-## Table of Contents
-- [Description](#description)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [API Endpoints](#api-endpoints)
-- [Environment Setup](#environment-setup)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Description
 Ayurveda Health Journey is a user-friendly platform designed to promote holistic health based on Ayurvedic principles. Users can:
 - Register and log in securely.
