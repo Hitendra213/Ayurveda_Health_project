@@ -1,0 +1,455 @@
+/* Navbar.css - Fully Responsive and Enhanced */
+
+/* Main Navigation */
+nav {
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  padding: clamp(12px, 2vw, 16px) clamp(20px, 4vw, 20px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Scrolled State */
+nav.scrolled {
+  background: rgba(66, 153, 225, 0.95);
+  backdrop-filter: blur(10px);
+  padding: clamp(8px, 1.5vw, 12px) clamp(16px, 3vw, 16px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Container */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Logo Styling */
+.logo {
+  color: #ffffff;
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.logo:hover {
+  color: #48bb78;
+  transform: scale(1.02);
+}
+
+.logo::before {
+  content: "🌿";
+  margin-right: clamp(6px, 1.5vw, 8px);
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+/* Navigation Links Container */
+.nav-links {
+  display: flex;
+  gap: clamp(16px, 2vw, 32px);
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.nav-links.mobile-open {
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+  backdrop-filter: blur(10px);
+  padding: clamp(80px, 20vh, 100px) 20px 20px;
+  gap: clamp(12px, 2vw, 16px);
+  align-items: stretch;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+/* Link and Button Base Styling */
+.nav-links a,
+.nav-links button {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: clamp(0.875rem, 2.5vw, 1rem);
+  font-weight: 500;
+  padding: clamp(8px, 2vw, 12px) clamp(16px, 3vw, 20px);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  min-width: fit-content;
+  text-align: center;
+}
+
+.nav-links.mobile-open a,
+.nav-links.mobile-open button {
+  padding: clamp(16px, 4vw, 20px);
+  font-size: clamp(1rem, 3vw, 1.1rem);
+  border-radius: 12px;
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #48bb78;
+  transform: translateY(-1px);
+}
+
+.nav-links.mobile-open a:hover,
+.nav-links.mobile-open button:hover {
+  transform: scale(1.02);
+}
+
+/* Active Link Styling */
+.nav-links a.active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #48bb78;
+}
+
+/* Logout Button Specific Styling */
+.nav-links button {
+  background-color: rgba(113, 128, 150, 0.8);
+  border: 2px solid transparent;
+  font-weight: 600;
+}
+
+.nav-links button:hover {
+  background-color: #718096;
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}
+
+.nav-links.mobile-open button {
+  background-color: rgba(113, 128, 150, 0.9);
+  border: 2px solid #ffffff;
+}
+
+/* Button Active State */
+.nav-links button:active {
+  transform: translateY(0);
+}
+
+/* Link Underline Animation */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #48bb78;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+  width: 80%;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 6px;
+  background: none;
+  border: none;
+  gap: 4px;
+  z-index: 1001;
+  position: relative;
+}
+
+.mobile-menu-toggle span {
+  width: clamp(20px, 4vw, 24px);
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.mobile-menu-toggle:hover span {
+  background-color: #48bb78;
+}
+
+.mobile-menu-toggle:focus {
+  outline: 2px solid #48bb78;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Hamburger Animation */
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    padding: 8px 14px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none; /* Hide by default on mobile */
+  }
+
+  .nav-links.mobile-open {
+    display: flex; /* Show when open */
+  }
+
+  nav {
+    padding: 12px 16px;
+  }
+
+  .nav-container {
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  .logo {
+    font-size: 1.4rem;
+  }
+
+  .nav-links.mobile-open {
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    padding: 12px 16px;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .mobile-menu-toggle span {
+    width: 22px;
+    height: 2px;
+  }
+
+  .nav-links.mobile-open {
+    padding: clamp(60px, 15vh, 80px) 16px 16px;
+    gap: 12px;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    font-size: 1.05rem;
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 10px 12px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .logo::before {
+    font-size: 1.1rem;
+    margin-right: 5px;
+  }
+
+  .nav-container {
+    gap: 8px;
+  }
+
+  .nav-links.mobile-open {
+    padding: clamp(50px, 12vh, 70px) 12px 12px;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  .mobile-menu-toggle {
+    padding: 4px;
+  }
+
+  .mobile-menu-toggle span {
+    width: 20px;
+    height: 2px;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .nav-links.mobile-open {
+    padding: 40px 8px 8px;
+  }
+
+  .nav-links a,
+  .nav-links button {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Landscape on Mobile */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 768px) {
+  nav {
+    padding: 8px 12px;
+  }
+
+  .nav-container {
+    gap: 8px;
+  }
+
+  .nav-links.mobile-open {
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    background: transparent;
+    box-shadow: none;
+    padding: 0 0 0 16px;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    gap: clamp(8px, 2vw, 12px);
+    align-items: center;
+    justify-content: flex-end;
+    max-height: none;
+  }
+
+  .nav-links.mobile-open a,
+  .nav-links.mobile-open button {
+    padding: clamp(6px, 1.5vw, 8px) clamp(12px, 2.5vw, 16px);
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    width: auto;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
+/* Focus States for Accessibility */
+.nav-links a:focus,
+.nav-links button:focus,
+.mobile-menu-toggle:focus {
+  outline: 2px solid #48bb78;
+  outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+  nav {
+    display: none;
+  }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+  nav {
+    background: #000000;
+    border-bottom: 2px solid #ffffff;
+  }
+
+  .logo,
+  .nav-links a,
+  .nav-links button {
+    color: #ffffff;
+  }
+
+  .nav-links a:hover,
+  .logo:hover {
+    color: #48bb78;
+  }
+
+  .mobile-menu-toggle span {
+    background-color: #ffffff;
+  }
+
+  .nav-links button {
+    background-color: #4b5563;
+    border: 2px solid #ffffff;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  nav,
+  .logo,
+  .nav-links a,
+  .nav-links button,
+  .nav-links a::after,
+  .mobile-menu-toggle span {
+    transition: none;
+  }
+
+  .logo:hover,
+  .nav-links a:hover,
+  .nav-links button:hover {
+    transform: none;
+  }
+
+  .nav-links.mobile-open {
+    animation: none;
+  }
+}

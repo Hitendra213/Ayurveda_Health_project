@@ -1,0 +1,291 @@
+/* WellnessHub.css - Unified with existing styles */
+
+/* Container and Layout */
+.wellness-hub-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(12px, 3vw, 20px);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+/* Header */
+.hub-header {
+  text-align: center;
+  margin-bottom: clamp(20px, 3vw, 32px);
+}
+
+.hub-header h1 {
+  font-size: clamp(24px, 5vw, 32px);
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.hub-header p {
+  font-size: clamp(14px, 2.5vw, 16px);
+  color: #718096;
+}
+
+/* Main Grid */
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: clamp(16px, 2vw, 24px);
+}
+
+/* Dashboard Card Reuse */
+.dashboard-card {
+  background: white;
+  border-radius: 12px;
+  padding: clamp(16px, 3vw, 24px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 8px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card h2 {
+  font-size: clamp(18px, 3vw, 20px);
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: clamp(12px, 2vw, 20px);
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+/* Diet Planner Section */
+.planner-section .prakruti-info {
+  font-size: clamp(13px, 2.5vw, 14px);
+  color: #4a5568;
+  text-align: center;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.meal-plan h3 {
+  font-size: clamp(16px, 3vw, 18px);
+  color: #48bb78;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.meals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.meal-day h4 {
+  font-size: 14px;
+  color: #2d3748;
+  margin-bottom: 8px;
+}
+
+.meal-day ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.meal-day li {
+  font-size: 13px;
+  color: #4a5568;
+  margin-bottom: 4px;
+}
+
+.meal-tips {
+  font-size: 12px;
+  color: #718096;
+  font-style: italic;
+  margin: 0;
+}
+
+.generate-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 16px;
+}
+
+.generate-btn:hover {
+  background-color: #3182ce;
+}
+
+/* Journal Section */
+.journal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2d3748;
+  margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background-color: #48bb78;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.save-btn:hover {
+  background-color: #38a169;
+}
+
+.recent-entries h3 {
+  font-size: 16px;
+  color: #2d3748;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 4px;
+}
+
+.entry-card {
+  background: #f8fafc;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  border-left: 3px solid #4299e1;
+}
+
+.entry-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #4a5568;
+}
+
+/* Messages */
+.error-message,
+.success-message {
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  border-left: 4px solid;
+  font-weight: 500;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  border-left-color: #ef4444;
+}
+
+.success-message {
+  background: #f0fff4;
+  color: #22543d;
+  border-left-color: #48bb78;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #718096;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hub-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .meals-list {
+    max-height: 300px;
+  }
+
+  .journal-form {
+    gap: 12px;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    font-size: 16px; /* Touch-friendly */
+  }
+}
+
+@media (max-width: 480px) {
+  .wellness-hub-container {
+    padding: 12px;
+  }
+
+  .hub-header h1 {
+    font-size: 24px;
+  }
+
+  .dashboard-card {
+    padding: 16px;
+  }
+
+  .generate-btn,
+  .save-btn {
+    width: 100%;
+  }
+}
+
+/* Accessibility and Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-card,
+  .generate-btn,
+  .save-btn {
+    transition: none;
+  }
+}
+
+@media print {
+  .hub-grid {
+    display: block;
+  }
+
+  .generate-btn,
+  .save-btn {
+    display: none;
+  }
+}

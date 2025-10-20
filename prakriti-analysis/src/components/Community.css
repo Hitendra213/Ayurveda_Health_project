@@ -1,0 +1,336 @@
+/* Community.css - Unified with Dashboard and ObservationForm Styles */
+
+/* Global Container */
+.community-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: clamp(12px, 3vw, 20px); /* Responsive padding */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.community-container h1 {
+  font-size: clamp(24px, 5vw, 32px); /* Responsive font size */
+  font-weight: 700;
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: clamp(20px, 3vw, 32px);
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+/* Loading & Error States */
+.loading {
+  text-align: center;
+  margin-top: clamp(40px, 8vw, 60px);
+  font-size: clamp(16px, 3vw, 1.2rem);
+  color: #718096;
+}
+
+.error-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-left: 4px solid #ef4444;
+  padding: clamp(10px, 2vw, 12px) clamp(16px, 3vw, 15px);
+  border-radius: 8px;
+  margin-bottom: clamp(16px, 3vw, 20px);
+  font-size: clamp(13px, 2.5vw, 14px);
+}
+
+/* Messages Container */
+.messages-container {
+  max-height: 500px;
+  overflow-y: auto;
+  background: #f8fafc;
+  padding: clamp(12px, 2vw, 15px);
+  border-radius: 12px;
+  margin-bottom: clamp(16px, 3vw, 20px);
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e0 #f7fafc;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.messages-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.messages-container::-webkit-scrollbar-thumb {
+  background-color: #a0aec0;
+  border-radius: 10px;
+}
+
+.messages-container::-webkit-scrollbar-track {
+  background: #f7fafc;
+}
+
+/* Individual Message */
+.message {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: clamp(12px, 2vw, 16px);
+  margin-bottom: clamp(8px, 1.5vw, 12px);
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.message:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  border-color: #4299e1;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: clamp(12px, 2.5vw, 0.9rem);
+  color: #718096;
+  margin-bottom: clamp(4px, 1vw, 5px);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.message-header strong {
+  color: #4299e1;
+  font-weight: 600;
+}
+
+.message-time {
+  font-size: clamp(11px, 2vw, 0.8rem);
+  color: #a0aec0;
+}
+
+.message-text {
+  font-size: clamp(13px, 2.5vw, 1rem);
+  color: #4a5568;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Message Form */
+.message-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 2vw, 10px);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: clamp(16px, 3vw, 20px);
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.message-form textarea {
+  resize: vertical;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  padding: clamp(10px, 2vw, 12px);
+  font-size: clamp(13px, 2.5vw, 1rem);
+  font-family: inherit;
+  outline: none;
+  background: #f7fafc;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  min-height: clamp(60px, 12vh, 80px);
+  box-sizing: border-box;
+}
+
+.message-form textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+  background: white;
+}
+
+.message-form textarea::placeholder {
+  color: #a0aec0;
+}
+
+.send-btn {
+  background-color: #4299e1;
+  color: #ffffff;
+  font-size: clamp(14px, 3vw, 1rem);
+  padding: clamp(10px, 2vw, 12px) clamp(24px, 4vw, 16px);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  min-width: clamp(120px, 20vw, 120px);
+}
+
+.send-btn:hover:not(:disabled) {
+  background-color: #3182ce;
+  transform: translateY(-1px);
+}
+
+.send-btn:disabled {
+  background-color: #cbd5e0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .community-container {
+    padding: 16px;
+  }
+
+  .messages-container {
+    max-height: 400px;
+  }
+
+  .message-form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .community-container h1 {
+    font-size: 24px;
+  }
+
+  .message-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .message-text {
+    font-size: 14px;
+  }
+
+  .message-form {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .send-btn {
+    width: 100%;
+  }
+
+  .messages-container {
+    max-height: 300px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .community-container {
+    padding: 12px;
+  }
+
+  .community-container h1 {
+    font-size: 22px;
+  }
+
+  .message {
+    padding: 12px;
+  }
+
+  .message-header {
+    font-size: 13px;
+  }
+
+  .message-text {
+    font-size: 13px;
+  }
+
+  .message-form textarea {
+    min-height: 70px;
+    font-size: 14px;
+  }
+
+  .send-btn {
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .community-container {
+    padding: 8px;
+  }
+
+  .messages-container {
+    padding: 10px;
+  }
+
+  .message-form {
+    padding: 12px;
+  }
+}
+
+/* Landscape on Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .messages-container {
+    max-height: 300px;
+  }
+
+  .community-container h1 {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .message-form {
+    padding: 12px;
+    gap: 8px;
+  }
+
+  .message-form textarea {
+    min-height: 50px;
+  }
+}
+
+/* Accessibility and Focus States */
+.message-form textarea:focus,
+.send-btn:focus {
+  outline: 2px solid #4299e1;
+  outline-offset: 2px;
+}
+
+.message:focus-within {
+  outline: 2px solid #4299e1;
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .message,
+  .send-btn,
+  .message-form textarea {
+    transition: none;
+  }
+
+  .message:hover,
+  .send-btn:hover {
+    transform: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .community-container {
+    background: white !important;
+    padding: 0;
+  }
+
+  .messages-container,
+  .message-form {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+
+  .send-btn {
+    display: none;
+  }
+
+  .message {
+    box-shadow: none;
+    border: 1px solid #000;
+  }
+}
