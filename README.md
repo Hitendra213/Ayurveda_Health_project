@@ -82,13 +82,14 @@ The app calculates a dynamic health score based on assessment frequency, journal
 ## Project Structure
 src/
 ├── components/
-│   ├── Dashboard.js          
-│   ├── WellnessHub.js        
-│   ├── Reports.js            
-│   ├── Register.js           
-│   ├── Profile.js            
-│   ├── ObservationForm.js    
-│   ├── Login.js              
-│   └── Community.js          
-├── App.js                    
-├── index.js                  
+│   ├── Dashboard.js          # Main dashboard with stats, metrics, tips
+│   ├── WellnessHub.js        # Meal plans & journaling
+│   ├── Reports.js            # Assessment reports & exports
+│   ├── Register.js           # User registration form
+│   ├── Profile.js            # User profile editing & logout
+│   ├── ObservationForm.js    # Multi-step Prakruti assessment
+│   ├── Login.js              # User login form
+│   └── Community.js          # Chat interface
+├── App.js                    # (Assumed) Root with Router setup
+├── index.js                  # Entry point
+└── styles/                   # CSS files (e.g., Dashboard.css)                
