@@ -51,3 +51,56 @@ The app calculates a dynamic health score based on assessment frequency, journal
 
 ## Installation
 1. **Clone the Repository**:
+   git clone <your-repo-url>
+   cd ayurveda-health-journey
+
+2. **Install Dependencies**:
+   npm install
+- Installs: `react`, `react-dom`, `react-router-dom`, `axios`, `lucide-react`.
+
+3. **Set Up Backend** (Required for full functionality):
+- Clone/start your Node.js backend server.
+- Ensure it runs on `http://localhost:5000`.
+- Database: MongoDB with collections for `users`, `assessments`, `journal`, `messages`.
+
+4. **Environment Variables**:
+- No frontend env vars needed (hardcoded base_url for dev).
+- For prod: Update `base_url` to your deployed backend.
+
+5. **Run the App**:
+- Opens at `http://localhost:3000`.
+
+## Usage
+- **Getting Started**:
+- Register/Login at `/register` or `/login`.
+- Land on `/dashboard` for overview.
+
+- **Key Flows**:
+- **Assessment**: Navigate to `/assessment` → Complete 12-step form → View summary with dosha calculation → Saved to backend.
+- **Wellness Hub** (`/wellness-hub`): View dosha-based meal plans (preview/full week toggle). Journal entries with auto-insights.
+- **Reports** (`/reports`): List of assessments → Click "View Details" for table comparison/export.
+- **Community** (`/community`): Post/read messages (requires login).
+- **Profile** (`/profile`): Edit details/logout.
+
+- **Sample Data**:
+- Meal plans: Pre-defined for Vata/Pitta/Kapha (7 days).
+- Tips/Reminders: Dynamic based on data/current date.
+- Health Score: Example breakdown shown in dashboard tooltip.
+
+- **Testing**:
+- Use browser dev tools for localStorage simulation.
+- Mock API responses if backend unavailable (app has fallbacks).
+
+## Project Structure
+src/
+├── components/
+│   ├── Dashboard.js          
+│   ├── WellnessHub.js        
+│   ├── Reports.js            
+│   ├── Register.js           
+│   ├── Profile.js            
+│   ├── ObservationForm.js    
+│   ├── Login.js              
+│   └── Community.js          
+├── App.js                    
+├── index.js                  
