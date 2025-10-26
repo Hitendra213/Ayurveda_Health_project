@@ -146,15 +146,17 @@ Graceful fallbacks for API failures (e.g., journal endpoint).
 
 ## Project Structure
 ```bash
-src/
-├── components/
-│   ├── Dashboard.js          
-│   ├── WellnessHub.js        
-│   ├── Reports.js            
-│   ├── Register.js           
-│   ├── Profile.js            
-│   ├── ObservationForm.js    
-│   ├── Login.js              
-│   └── Community.js          
-├── App.js                    
-└── index.js                                                     
+  src/
+  ├── components/
+  │   ├── Dashboard.js          
+  │   ├── WellnessHub.js        
+  │   ├── Reports.js            
+  │   ├── Register.js           
+  │   ├── Profile.js            
+  │   ├── ObservationForm.js    
+  │   ├── Login.js              
+  │   └── Community.js          
+  ├── App.js                    
+  └── index.js
+
+                                               
