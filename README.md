@@ -1,21 +1,21 @@
-# 🌿 Ayurveda Health Journey
+# Ayurveda Health Journey
 
 A comprehensive **web application built with React.js** that allows users to explore Ayurveda principles, assess their *Prakruti* (constitutional type), track wellness through journaling and meal plans, view personalized reports, and engage in a global community chat.  
 The app integrates with a **Node.js/Express backend** for user authentication, data persistence, and API interactions.
 
 ---
 
-## 🧘‍♀️ Description
+## Description
 
 **Ayurveda Health Journey** is a user-friendly platform designed to promote holistic health based on Ayurvedic principles.
 
 ### Users can:
-- 🪔 Register and log in securely.
-- 🔍 Complete detailed Prakruti assessments to determine their dosha (*Vata*, *Pitta*, *Kapha*) balance.
-- 🍲 Access personalized meal plans, daily tips, and lifestyle recommendations.
-- ✍️ Maintain a wellness journal to track mood, symptoms, and reflections.
-- 📊 View historical reports and health scores.
-- 💬 Interact in a global community chat for sharing tips and questions.
+-  Register and log in securely.
+-  Complete detailed Prakruti assessments to determine their dosha (*Vata*, *Pitta*, *Kapha*) balance.
+-  Access personalized meal plans, daily tips, and lifestyle recommendations.
+-  Maintain a wellness journal to track mood, symptoms, and reflections.
+-  View historical reports and health scores.
+-  Interact in a global community chat for sharing tips and questions.
 
 The app calculates a **dynamic health score** based on:
 > Assessment frequency, journal consistency, mood averages, and Prakruti balance.
@@ -24,36 +24,36 @@ It's responsive and uses modern UI components for an engaging experience.
 
 ---
 
-## ⚙️ Features
+## Features
 
-- **🔐 User Authentication**  
+- ** User Authentication**  
   Secure registration, login, and profile management (email/password-based).
 
-- **🧬 Prakruti Assessment**  
+- ** Prakruti Assessment**  
   Multi-step form for self-assessment of physical, mental, emotional, and environmental traits.  
   Calculates dominant dosha and provides recommendations.
 
-- **📈 Dashboard**  
+- ** Dashboard**  
   Personalized overview with:
   - Health score (0–100%)
   - Prakruti distribution
   - Metrics (energy, sleep, etc.)
   - Recent activities, daily tips, and reminders.
 
-- **🌿 Wellness Hub**  
+- ** Wellness Hub**  
   Dosha-specific weekly meal plans (Vata, Pitta, Kapha) with generate/preview functionality.  
   Integrated journaling with mood tracking, symptoms, notes, and dosha insights.
 
-- **📜 Reports**  
+- ** Reports**  
   View, export (JSON), and compare past assessments in tabular format with trait comparisons and recommendations.
 
-- **👤 Profile Settings**  
+- ** Profile Settings**  
   Update email/password and logout.
 
-- **💬 Community Chat**  
+- ** Community Chat**  
   Real-time message board for user discussions (fetches/sends messages via API).
 
-- **📊 Health Score Calculation**  
+- ** Health Score Calculation**  
   Weighted algorithm:  
     40% - Assessments
     30% - Mood Average
@@ -61,18 +61,18 @@ It's responsive and uses modern UI components for an engaging experience.
     10% - Prakruti Balance
 
 
-- **📱 Responsive Design**  
+- ** Responsive Design**  
 Mobile-friendly UI with CSS Modules and Lucide icons.
 
-- **⚠️ Error Handling & Loading States**  
+- ** Error Handling & Loading States**  
 Graceful fallbacks for API failures (e.g., journal endpoint).
 
 ---
 
-## 🧩 Tech Stack
+## Tech Stack
 
 ### Frontend
-- React.js (v18+) — Hooks: `useState`, `useEffect`, `useRef`
+- React.js — Hooks: `useState`, `useEffect`, `useRef`
 - React Router DOM — For navigation
 - CSS Modules — Modular styling (e.g., `Dashboard.css`, `WellnessHub.css`)
 
@@ -82,7 +82,6 @@ Graceful fallbacks for API failures (e.g., journal endpoint).
 
 ### Storage
 - LocalStorage for session (email/password)  
-⚠️ *Insecure for production; use JWT tokens instead.*
 
 ### Date Handling
 - Native JavaScript `Date` for timestamps and calculations  
