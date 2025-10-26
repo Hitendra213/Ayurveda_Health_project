@@ -142,6 +142,8 @@ Graceful fallbacks for API failures (e.g., journal endpoint).
 - Use browser dev tools for localStorage simulation.
 - Mock API responses if backend unavailable (app has fallbacks).
 
+---
+
 ## Project Structure
 ```bash
 src/
