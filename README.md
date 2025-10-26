@@ -158,7 +158,3 @@ Graceful fallbacks for API failures (e.g., journal endpoint).
 **Testing:**
 - Use browser dev tools for localStorage simulation.
 - Mock API responses if backend unavailable (app has fallbacks).
-
-
-
-                                               
