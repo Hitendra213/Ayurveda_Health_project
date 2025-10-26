@@ -69,6 +69,23 @@ Graceful fallbacks for API failures (e.g., journal endpoint).
 
 ---
 
+## Project Structure
+```bash
+  src/
+  ├── components/
+  │   ├── Dashboard.js          
+  │   ├── WellnessHub.js        
+  │   ├── Reports.js            
+  │   ├── Register.js           
+  │   ├── Profile.js            
+  │   ├── ObservationForm.js    
+  │   ├── Login.js              
+  │   └── Community.js          
+  ├── App.js                    
+  └── index.js
+```
+---
+
 ## Tech Stack
 
 ### Frontend
@@ -142,21 +159,6 @@ Graceful fallbacks for API failures (e.g., journal endpoint).
 - Use browser dev tools for localStorage simulation.
 - Mock API responses if backend unavailable (app has fallbacks).
 
----
 
-## Project Structure
-```bash
-  src/
-  ├── components/
-  │   ├── Dashboard.js          
-  │   ├── WellnessHub.js        
-  │   ├── Reports.js            
-  │   ├── Register.js           
-  │   ├── Profile.js            
-  │   ├── ObservationForm.js    
-  │   ├── Login.js              
-  │   └── Community.js          
-  ├── App.js                    
-  └── index.js
 
                                                
