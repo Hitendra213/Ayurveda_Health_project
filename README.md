@@ -26,34 +26,34 @@ It's responsive and uses modern UI components for an engaging experience.
 
 ## Features
 
-- ** User Authentication**  
+- **User Authentication**  
   Secure registration, login, and profile management (email/password-based).
 
-- ** Prakruti Assessment**  
+- **Prakruti Assessment**  
   Multi-step form for self-assessment of physical, mental, emotional, and environmental traits.  
   Calculates dominant dosha and provides recommendations.
 
-- ** Dashboard**  
+- **Dashboard**  
   Personalized overview with:
   - Health score (0–100%)
   - Prakruti distribution
   - Metrics (energy, sleep, etc.)
   - Recent activities, daily tips, and reminders.
 
-- ** Wellness Hub**  
+- **Wellness Hub**  
   Dosha-specific weekly meal plans (Vata, Pitta, Kapha) with generate/preview functionality.  
   Integrated journaling with mood tracking, symptoms, notes, and dosha insights.
 
-- ** Reports**  
+- **Reports**  
   View, export (JSON), and compare past assessments in tabular format with trait comparisons and recommendations.
 
-- ** Profile Settings**  
+- **Profile Settings**  
   Update email/password and logout.
 
-- ** Community Chat**  
+- **Community Chat**  
   Real-time message board for user discussions (fetches/sends messages via API).
 
-- ** Health Score Calculation**  
+- **Health Score Calculation**  
   Weighted algorithm:  
     40% - Assessments
     30% - Mood Average
@@ -61,10 +61,10 @@ It's responsive and uses modern UI components for an engaging experience.
     10% - Prakruti Balance
 
 
-- ** Responsive Design**  
+- **Responsive Design**  
 Mobile-friendly UI with CSS Modules and Lucide icons.
 
-- ** Error Handling & Loading States**  
+- **Error Handling & Loading States**  
 Graceful fallbacks for API failures (e.g., journal endpoint).
 
 ---
