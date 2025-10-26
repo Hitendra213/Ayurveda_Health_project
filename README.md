@@ -122,23 +122,23 @@ Graceful fallbacks for API failures (e.g., journal endpoint).
 
 
 ## Usage
-- **Getting Started**:
+**Getting Started:**
 - Register/Login at `/register` or `/login`.
 - Land on `/dashboard` for overview.
 
-- **Key Flows**:
+**Key Flows:**
 - **Assessment**: Navigate to `/assessment` → Complete 12-step form → View summary with dosha calculation → Saved to backend.
 - **Wellness Hub** (`/wellness-hub`): View dosha-based meal plans (preview/full week toggle). Journal entries with auto-insights.
 - **Reports** (`/reports`): List of assessments → Click "View Details" for table comparison/export.
 - **Community** (`/community`): Post/read messages (requires login).
 - **Profile** (`/profile`): Edit details/logout.
 
-- **Sample Data**:
+**Sample Data:**
 - Meal plans: Pre-defined for Vata/Pitta/Kapha (7 days).
 - Tips/Reminders: Dynamic based on data/current date.
 - Health Score: Example breakdown shown in dashboard tooltip.
 
-- **Testing**:
+**Testing:**
 - Use browser dev tools for localStorage simulation.
 - Mock API responses if backend unavailable (app has fallbacks).
 
