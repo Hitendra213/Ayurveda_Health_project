@@ -119,6 +119,7 @@ Graceful fallbacks for API failures (e.g., journal endpoint).
    npm start
  - Opens at `http://localhost:3000`.
 
+---
 
 ## Usage
 **Getting Started:**
