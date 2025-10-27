@@ -71,18 +71,34 @@ Graceful fallbacks for API failures (e.g., journal endpoint).
 
 ## Project Structure
 ```bash
-  src/
-  ├── components/
-  │   ├── Dashboard.js          
-  │   ├── WellnessHub.js        
-  │   ├── Reports.js            
-  │   ├── Register.js           
-  │   ├── Profile.js            
-  │   ├── ObservationForm.js    
-  │   ├── Login.js              
-  │   └── Community.js          
-  ├── App.js                    
-  └── index.js
+project/
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── Dashboard.js
+│   │   │   ├── WellnessHub.js
+│   │   │   ├── Reports.js
+│   │   │   ├── Register.js
+│   │   │   ├── Profile.js
+│   │   │   ├── ObservationForm.js
+│   │   │   ├── Login.js
+│   │   │   └── Community.js
+│   │   ├── App.js          # Router & main layout
+│   │   └── index.js        # Entry point
+│   └── package.json        # Frontend deps (react, axios, etc.)
+└── backend/
+    ├── models/
+    │   ├── User.js         # Auth model
+    │   ├── Assessment.js
+    │   ├── Journal.js
+    │   └── Message.js
+    ├── routes/
+    │   ├── auth.js         # Register/login/me
+    │   ├── assessments.js  # CRUD assessments
+    │   ├── journal.js      # CRUD journal
+    │   └── messages.js     # Community chat
+    ├── server.js           # Express app setup
+    └── package.json        # Backend deps (express, mongoose, bcryptjs)
 ```
 ---
 
