@@ -110,7 +110,7 @@ Graceful fallbacks for API failures (e.g., journal endpoint).
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 1. **Clone the Repository**
    ```bash
