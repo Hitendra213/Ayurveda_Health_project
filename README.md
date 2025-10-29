@@ -152,7 +152,7 @@ PORT=5000
 
 ### 4. Frontend Setup
 ```bash
-cd ../frontend
+cd frontend
 npm install
 ```
 
