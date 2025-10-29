@@ -126,31 +126,54 @@ project/
 
 ---
 
-## Installation
+## Installation Steps
 
-1. **Clone the Repository**
-   ```bash
-   git clone <your-repo-url>
-   cd ayurveda-health-journey
-   
-2. **Install Dependencies**
-   ```bash
-   npm install
-- Installs: `react`, `react-dom`, `react-router-dom`, `axios`, `lucide-react`.
+### 1. Clone the Repository
+```bash
+git clone <your-repo-url>
+cd Ayurveda_Health_project
+```
 
-3. **Set Up Backend** (Required for full functionality):
-- Clone/start your Node.js backend server.
-- Ensure it runs on `http://localhost:5000`.
-- Database: MongoDB with collections for `users`, `assessments`, `journal`, `messages`.
+### 2. Backend Setup
+```bash
+cd backend
+npm install
+```
 
-4. **Environment Variables**:
-- No frontend env vars needed (hardcoded base_url for dev).
-- For prod: Update `base_url` to your deployed backend.
+**Dependencies installed:**
+- express, mongoose, bcryptjs, jsonwebtoken, cors, dotenv, nodemon
 
-5. **Run the App**
-   ```bash
-   npm start
- - Opens at `http://localhost:3000`.
+### 3. Database Configuration
+Ensure MongoDB is running locally on port 27017, or update the `.env` file:
+```
+MONGO_URI=mongodb://localhost:27017/ayurveda_health
+PORT=5000
+```
+
+### 4. Frontend Setup
+```bash
+cd ../frontend
+npm install
+```
+
+**Dependencies installed:**
+- react, react-dom, react-router-dom, axios, lucide-react, react-to-print
+
+### 5. Start the Application
+
+**Terminal 1 - Backend Server:**
+```bash
+cd backend
+node server.js
+```
+*Server runs on http://localhost:5000*
+
+**Terminal 2 - Frontend App:**
+```bash
+cd frontend
+npm start
+```
+*App opens at http://localhost:3000*
 
 ---
 
@@ -174,4 +197,3 @@ project/
 **Testing:**
 - Use browser dev tools for localStorage simulation.
 - Mock API responses if backend unavailable (app has fallbacks).
-
